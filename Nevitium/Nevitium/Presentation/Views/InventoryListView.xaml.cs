@@ -1,6 +1,4 @@
 ﻿
-using Nevitium.Domain.Entities.Inventory;
-using Nevitium.Helpers;
 using Nevitium.Helpers.Services;
 using Nevitium.Presentation.ViewModels;
 using Xamarin.Forms;

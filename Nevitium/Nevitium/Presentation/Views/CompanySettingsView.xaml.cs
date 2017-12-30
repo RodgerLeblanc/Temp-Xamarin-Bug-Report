@@ -1,6 +1,5 @@
 ﻿
 using System;
-using Nevitium.Helpers;
 using Nevitium.Helpers.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

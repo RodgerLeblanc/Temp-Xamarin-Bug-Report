@@ -1,7 +1,6 @@
 ﻿using CommonServiceLocator;
 using Nevitium.Domain.Entities.Settings;
 using Nevitium.Persistence.Database;
-using Nevitium.Helpers;
 using Nevitium.Helpers.Services;
 using Nevitium.Presentation.ViewModels;
 using Unity;

@@ -1,6 +1,5 @@
 ﻿using CommonServiceLocator;
 using Nevitium.Domain.Entities.Settings;
-using Nevitium.Helpers;
 using Nevitium.Helpers.Services;
 using Nevitium.Presentation.ViewModels;
 using Xamarin.Forms;
