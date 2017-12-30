@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nevitium.Presentation.Views.CompanySettingsWebServicesView"
+             Title="Web Services">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20,20,20,20">
+                <Label Text="WARNING: Do not change any of these settings unless you know the consequences."
+                       TextColor="Red"  FontSize="Micro"/>
+                           
+                <StackLayout>
+                    <Label Text="UPC Product Web Service"
+                           Margin="0,20,0,0" />
+
+                    <BoxView HeightRequest="1"
+                             Color="#5b5d68" />
+
+                    <Label Text="URL" />
+                    <Entry Text="{Binding UpcWebService.Url}"/>
+                    <Label Text="User Key" />
+                    <Entry Text="{Binding UpcWebService.UserKey}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Amazon Mareketplace Web Service"
+                           Margin="0,20,0,0" />
+
+                    <BoxView HeightRequest="1"
+                             Color="#5b5d68" />
+                    <Label Text="Amazon sellers get access to the MWS API.  Register as a developer to obtain IDs and access keys. This service can be used to look up products with a barcode."
+                           FontSize="Micro" />
+                    <Label Text="SellerID" />
+                    <Entry Text="{Binding AmazonMWS.SellerId}" />
+                    <Label Text="Access Key" />
+                    <Entry Text="{Binding AmazonMWS.AccessKeyID}" />
+                    <Label Text="Secret Key" />
+                    <Entry Text="{Binding AmazonMWS.SecretKey}" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

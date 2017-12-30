@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nevitium.Presentation.Views.InventoryDetailView"
+             xmlns:behaviors="clr-namespace:Nevitium.Presentation.Behaviors"
+             Title="Inventory Detail"
+>
+
+    <ContentPage.Content>
+
+        <StackLayout Padding="20,0,20,0">
+
+            <StackLayout Orientation="Horizontal">
+                <Button HorizontalOptions="FillAndExpand"
+                        Text="Cancel"
+                        Command="{Binding CancelCommand}" />
+                <Button HorizontalOptions="FillAndExpand" x:Name="SaveButton"
+                        Text="Save"
+                        Command="{Binding SaveCommand}" />
+            </StackLayout>
+
+            <ScrollView>
+                <StackLayout Padding="0, 0, 0, 20">
+
+                    <Label Text="Service" />
+                    <Switch IsToggled="{Binding Inventory.Service}"
+                            Toggled="ServiceToggle_Toggled" />
+
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="UPC"
+                               x:Name="UpcLabel" />
+                        <Image Source=""
+                               x:Name="UpcImage" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="UpcCodeEntry"
+                               HorizontalOptions="FillAndExpand"
+                               Text="{Binding Inventory.UPCA}">
+                            <Entry.Behaviors>
+                                <behaviors:LimitedStringBehavior MaxLength="16" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Button Text="Search Online"
+                                Clicked="OnlineUpcSearch_Clicked" />
+                    </StackLayout>
+
+                    <Label Text="EAN Code"
+                           x:Name="EanLabel" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="EanCodeEntry"
+                               HorizontalOptions="FillAndExpand"
+                               Text="{Binding Inventory.EAN13}">
+                            <Entry.Behaviors>
+                                <behaviors:LimitedStringBehavior MaxLength="16" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Button Text="Search Online"
+                                Clicked="OnlineEanSearch_Clicked" />
+                    </StackLayout>
+
+                    <Label Text="Amazon ASIN Code"
+                           x:Name="AsinLabel" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="AsinCodeEntry"
+                               HorizontalOptions="FillAndExpand"
+                               Text="{Binding Inventory.AmazonASIN}">
+                            <Entry.Behaviors>
+                                <behaviors:LimitedStringBehavior MaxLength="16" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Button Text="Search Online"
+                                Clicked="OnlineAsinSearch_Clicked" />
+                    </StackLayout>
+
+                    <Label Text="ISBN"
+                           x:Name="IsbnLabel" />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="IsbnCodeEntry"
+                               HorizontalOptions="FillAndExpand"
+                               Text="{Binding Inventory.ISBN}">
+                            <Entry.Behaviors>
+                                <behaviors:LimitedStringBehavior MaxLength="16" />
+                            </Entry.Behaviors>
+                        </Entry>
+                        <Button Text="Search Online"
+                                Clicked="OnlineIsbnSearch_Clicked" />
+                    </StackLayout>
+
+                    <Label Text="Custom Code" />
+                    <Entry Text="{Binding Inventory.CustomCode}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Short Description"  x:Name="ShortDescriptionLabel"/>
+                    <Entry Text="{Binding Inventory.ShortDescription}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="100" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                        <Label Text="Long Description" />
+                    <Editor Text="{Binding Inventory.LongDescription}"
+                            HeightRequest="120">
+                       
+                    </Editor>
+
+                    <Label Text="Manufacturer"
+                           x:Name="MfgLabel" />
+                    <Entry x:Name="MfgEntry"
+                           Text="{Binding Inventory.Manufacturer}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Brand"
+                           x:Name="BrandLabel" />
+                    <Entry x:Name="BrandEntry"
+                           Text="{Binding Inventory.Brand}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Model"
+                           x:Name="ModelLabel" />
+                    <Entry x:Name="ModelEntry"
+                           Text="{Binding Inventory.Model}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Color"
+                           x:Name="ColorLabel" />
+                    <Entry x:Name="ColorEntry"
+                           Text="{Binding Inventory.Color}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="20" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Size"
+                           x:Name="SizeLabel" />
+                    <Entry x:Name="SizeEntry"
+                           Text="{Binding Inventory.Size}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Dimensions"
+                           x:Name="DimLabel" />
+                    <Entry x:Name="DimEntry"
+                           Text="{Binding Inventory.Dimensions}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label  Text="Weight"
+                            x:Name="WeightLabel" />
+                    <Entry x:Name="WeightEntry"
+                           Text="{Binding Inventory.Weight}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedStringBehavior MaxLength="40" />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Quantity"
+                           x:Name="QtyLabel" />
+                    <Entry x:Name="QuantityEntry"
+                           Text="{Binding Inventory.Quantity}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedDecimalBehavior  />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label  Text="Allow Partial Quantity Sale"
+                            x:Name="PartialLabel" />
+                    <Switch x:Name="AllowPartialToggle"
+                            IsToggled="{Binding Inventory.AllowPartial}" />
+
+                    <Label Text="Reorder @"
+                           x:Name="ReorderLabel" />
+                    <Entry x:Name="ReorderEntry"
+                           Text="{Binding Inventory.ReorderCutoff}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedIntegerBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Cost" />
+                    <Entry Text="{Binding Inventory.Cost}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedDecimalBehavior  />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Minimum Price" />
+                    <Entry Text="{Binding Inventory.MinPrice}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedDecimalBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Maximum Price" />
+                    <Entry Text="{Binding Inventory.MaxPrice}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedDecimalBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Label Text="Maximum Discount Percent" />
+                    <Entry Text="{Binding Inventory.MaxDiscountPercent}">
+                        <Entry.Behaviors>
+                            <behaviors:LimitedDecimalBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tax 1" />
+                        <Switch IsToggled="{Binding Inventory.Tax1}" />
+                        <Label Text="Tax 2" />
+                        <Switch IsToggled="{Binding Inventory.Tax2}" />
+                    </StackLayout>
+                   
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

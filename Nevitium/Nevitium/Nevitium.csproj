@@ -1,0 +1,90 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>nevitium.windows.ico</ApplicationIcon>
+    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Unity" Version="5.5.0" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ServiceLayer\Amazon\" />
+    <Folder Include="ServiceLayer\BlobStorage\" />
+    <Folder Include="ServiceLayer\NucleusInvoiceApi\" />
+    <Folder Include="ServiceLayer\UpcItemDb\" />
+    <Folder Include="ServiceLayer\Twilio\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Presentation\Localization\Resources\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\AppSettingsDataView.xaml.cs">
+      <DependentUpon>AppSettingsDataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\AppSettingsView.xaml.cs">
+      <DependentUpon>AppSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\CompanySettingsView.xaml.cs">
+      <DependentUpon>CompanySettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\ContactsView.xaml.cs">
+      <DependentUpon>ContactsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\InventoryDetailView.xaml.cs">
+      <DependentUpon>InventoryDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\InventoryImagesView.xaml.cs">
+      <DependentUpon>InventoryImagesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\InventoryListView.xaml.cs">
+      <DependentUpon>InventoryListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\InvoiceView.xaml.cs">
+      <DependentUpon>InvoiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\LedgerView.xaml.cs">
+      <DependentUpon>LedgerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\MasterView.xaml.cs">
+      <DependentUpon>MasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\NewCompanyView.xaml.cs">
+      <DependentUpon>NewCompanyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Views\CompanySettingsWebServicesView.xaml.cs">
+      <DependentUpon>CompanySettingsWebServicesView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Presentation\Localization\Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Presentation\Views\InventoryImagesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="NETStandard.Library" Version="2.0.1" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"              
+             x:Class="Nevitium.Presentation.Views.CompanySettingsView"
+             Title="Company Settings">
+    <ContentPage.Content>
+        <StackLayout 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand" Padding="20,0,20,0">
+            
+            <Button Text="Region"
+                    Clicked="InvoiceSettingsButton_Clicked" />
+            <Button Text="Currency"
+                    Clicked="InvoiceSettingsButton_Clicked" />
+            <Button Text="Taxes"
+                    Clicked="InvoiceSettingsButton_Clicked" />
+            <Button Text="Invoices"
+                    Clicked="InvoiceSettingsButton_Clicked" />
+            <Button Text="Inventory"
+                    Clicked="InvoiceSettingsButton_Clicked" />
+            <Button Text="Security"
+                    Clicked="InvoiceSettingsButton_Clicked" />
+            <Button Text="Data Services" 
+                    Clicked="DataServicesButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

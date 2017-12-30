@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nevitium.Presentation.Views.HomeView"
+             xmlns:i18n="clr-namespace:Nevitium.Presentation.Localization"
+             Title="{i18n:Translate FullAppTitle}">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout > 
+                <Image x:Name="AppLogo"
+                       Aspect="AspectFit" />
+            </StackLayout>
+            <StackLayout
+                VerticalOptions="End">
+                <Label HorizontalOptions="Center" Text="© Nucleus Mobile LLC 2017" />
+            </StackLayout>
+            
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>
