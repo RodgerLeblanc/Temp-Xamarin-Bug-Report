@@ -49,6 +49,7 @@
                             />
             </StackLayout>
             <ListView x:Name="InventoryList"
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
                           ItemsSource="{Binding InventoryList}" >
 
                 <ListView.Behaviors >

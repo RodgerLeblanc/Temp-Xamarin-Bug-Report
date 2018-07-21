@@ -35,7 +35,8 @@ namespace Nevitium.Presentation.ViewModels
         public ICommand NewInventoryCommand { get; private set; }
         public ICommand ItemSelectedCommand { get; private set; }
 
-        
+        public Inventory SelectedItem { get; set; }
+
         private InventoryFacade _inventoryFacade;
 
 
@@ -58,8 +59,14 @@ namespace Nevitium.Presentation.ViewModels
 
         public void HandleItemSelected(Inventory item)
         {
+            if (item == null)
+                return;
+
             Debug.WriteLine("ListViewHandleItem FIRED ***************");
             _navigationService.PushAsync(typeof(InventoryDetailViewModel), item);
+
+            SelectedItem = null;
+            OnPropertyChanged(nameof(SelectedItem));
         }
 
         public async void Refresh()
